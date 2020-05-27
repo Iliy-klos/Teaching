@@ -1,2 +1,2 @@
-#starting learning
+#First step
 print("hello there")
