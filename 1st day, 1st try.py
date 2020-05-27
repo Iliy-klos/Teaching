@@ -12,13 +12,15 @@ print(z) #hmmm падазрительна
 #чек символов для переменных
 s_e = 1
 print("s_e", s_e)
-s_e = "fgr"
-print("s_e", s_e)
+s_ee = "fgr"
+print("s_e", s_ee)
 set = 2/4
 print("set", set)
 se = 'gth'
 print("se", se)
-#символы в print
+# символы в print
+x = "Don't need a backslash"
+print(x)
 x = 'Can\'t get by without a backslash'
 print(x)
 x = "Backslash your \" character!"
@@ -27,7 +29,7 @@ x = 'You can leave the " alone'
 print(x)
 x = """Starting and ending a string with ' "" triple " characters 
 permits embedded newlines, and the use of  and  without backslashes"""
-#Изучение пересечения типов
+# Изучение пересечения типов
 a = 5*'sfe'
 b = (1+4j)*4
 import cmath
