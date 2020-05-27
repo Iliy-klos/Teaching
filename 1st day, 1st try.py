@@ -1,20 +1,22 @@
-#First step
-print("hello there")#тестовый комментарий
-#Изучение округления
+import cmath
+import math
+# First step
+print("hello there")  # тестовый комментарий
+# Изучение округления
 z=4/3
 print(z)
 z=4//3
 print(z)
-#z++
+# z++
 z=5
 z = z+1+z+1
-print(z) #hmmm падазрительна
-#чек символов для переменных
+print(z)  # hmmm падазрительна
+# чек символов для переменных
 s_e = 1
 print("s_e", s_e)
 s_ee = "fgr"
 print("s_e", s_ee)
-set = 2/4
+s3t = 2/4
 print("set", set)
 se = 'gth'
 print("se", se)
@@ -32,9 +34,14 @@ permits embedded newlines, and the use of  and  without backslashes"""
 # Изучение пересечения типов
 a = 5*'sfe'
 b = (1+4j)*4
-import cmath
-import math
 c = cmath.log(3+3j)
 d = cmath.sqrt(-1)
 g = math.cos(4.6)
 print(a, '\n', b, '\t', c, "\n", d, g)
+print("++++++++++++++++++++++++++++++++++++++++++++++++")
+# 4.9 Работа с вводом
+# age = input("Age? ")
+# print(age)
+Chislo = float(input("Input десятичную дробь"))
+print("Число = ", Chislo)
+#
