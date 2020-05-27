@@ -19,8 +19,6 @@ print("set", set)
 se = 'gth'
 print("se", se)
 #символы в print
-x = "Don't need a backslash"
-print(x)
 x = 'Can\'t get by without a backslash'
 print(x)
 x = "Backslash your \" character!"
