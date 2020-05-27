@@ -1,1 +1,2 @@
-print("hello there")#тестовый комент
+#First step
+print("hello there")
