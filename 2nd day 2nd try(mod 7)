@@ -1,0 +1,12 @@
+name = {}
+check_name = 'да'
+check_age = 'да'
+i = 0
+while check_name == 'да':
+    name[input("Введите имя человека ")] = input("Введите возраст человека ")
+    check_name = input("Нужно ввести ещё одного? да/нет ")
+while check_age == 'да':
+    c = input("Чей возраст вы хотели бы вспомнить? ")
+    print('Его возраст: ', name[c])
+    check_age = input("Ещё чей-то? да/нет ")
+print("Спасибо за использование нашей программы")
