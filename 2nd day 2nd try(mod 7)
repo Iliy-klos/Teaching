@@ -28,6 +28,12 @@ while True:
     else:
         n += 1
         i = 0
+l = 0
+for l in range(len(tabl)):
+    if l < ist:
+        print(tabl[(n, l)])
+    else:
+        print("\n")
 print(tabl)
 #l = 0
 #i = 0
