@@ -1,12 +1,47 @@
+# Первый словарик
 name = {}
 check_name = 'да'
 check_age = 'да'
 i = 0
-while check_name == 'да':
-    name[input("Введите имя человека ")] = input("Введите возраст человека ")
-    check_name = input("Нужно ввести ещё одного? да/нет ")
-while check_age == 'да':
-    c = input("Чей возраст вы хотели бы вспомнить? ")
-    print('Его возраст: ', name[c])
-    check_age = input("Ещё чей-то? да/нет ")
+#while check_name == 'да':
+#    L = input("Введите имя человека ")
+ #   name[L] = input("Введите возраст человека ")
+ #   check_name = input("Нужно ввести ещё одного? да/нет ")
+#while check_age == 'да':
+#    c = input("Чей возраст вы хотели бы вспомнить? ")
+#    print('Его возраст: ', name[c])
+#    check_age = input("Ещё чей-то? да/нет ")
 print("Спасибо за использование нашей программы")
+
+# Словарь для хранения содержимого табл.
+i = 0
+n = 0
+tabl = {}
+ist = int(input("Введите число столбцов таблицы "))
+while True:
+    L = (n, i)
+    tabl[L] = input("Введите значение ячейки ")
+    if input("Желаете закончить? Да/Enter ") == 'Да':
+        break
+    if i < ist:
+        i += 1
+    else:
+        n += 1
+        i = 0
+print(tabl)
+#l = 0
+#i = 0
+#if l <= 3:
+#    if i <= ist:
+#        print(tabl[(n, i)], "\t")
+#    else:
+#        i = 0
+#        l += 1
+#        print("\n")
+while input("Желаете изменить значение ячейки? Да/Нет ") == 'Да':
+    L = (int(input("Введите столбец ")), int(input("Введите ряд ")))
+    tabl[L] = input("Введите новое значение ячейки ")
+    print(tabl)
+while input("Желаете узнать значение конкретной ячейки? Да/Enter ") == 'Да':
+    print(tabl[int(input("Введите столбец ячейки ")), int(input("Введите ряд ячейки "))])
+
