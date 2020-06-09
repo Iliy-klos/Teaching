@@ -1,0 +1,50 @@
+# Работа с 5 модулем: начало
+x = [3, 5, 76, 7, 5, 7, 8, 4, 32, 64, 76]
+print(x[len(x)//2:])
+y = x[len(x)-3:]
+y.extend(x[:len(x)-3])
+print(y)
+
+# Изучаю sort
+
+
+def compare_mid(l1st):
+    return l1st[len(l1st)//2]
+
+
+word_list = [[1, 2, 3], [2, 1, 3], [4, 0, 1]]
+word_list.sort(key=compare_mid)
+print(word_list)
+
+# 5.5 задание
+print(x)
+# num = int(input("Что нужно удалить из списка? "))
+# if num in x:
+#    while num in x:
+#        x.remove(num)
+# else:
+#    print("Такого нет! ")
+# print(x)
+
+# copy list
+x = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+import copy
+y = copy.deepcopy(x)
+x[0][0] = x[1]
+print(x[[0][0]])
+
+# Определить самую высокую, низкую,
+# а также среднюю и медианную температуры из множества температур.
+# Определить, сколько уникальных температур содержит список
+temperatures = [23, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 36, 40, 65, 10, 12, 0, 14, 12, 30, 31, 33, 36]
+max_temp = max(temperatures)
+min_temp = min(temperatures)
+mid_temp = sum(temperatures)/len(temperatures)
+temperatures.sort()
+median_temp = temperatures[len(temperatures)//2]
+print("max = ", max_temp)
+print("min = ", min_temp)
+print("mean = ", mid_temp)
+print("median = ", median_temp)
+unique_temp = set(temperatures)
+print(unique_temp)
