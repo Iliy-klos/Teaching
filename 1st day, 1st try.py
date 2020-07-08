@@ -1,8 +1,8 @@
 import cmath
 import math
 # First step
-print("hello there")#тестовый комментарий# в другую ветку
-#Изучение округления
+print("hello there")  # тестовый комментарий
+# Изучение округления
 z=4/3
 print(z)
 z=4//3
