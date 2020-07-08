@@ -1,0 +1,8 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="1st day, 3rd try(mod 6)" type="Python" />
+      <mapping pattern="2nd day 2nd try(mod 7)" type="Python" />
+    </extensionMap>
+  </component>
+</application>
