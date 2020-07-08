@@ -2,7 +2,6 @@
 name = {}
 check_name = 'да'
 check_age = 'да'
-i = 0
 #while check_name == 'да':
 #    L = input("Введите имя человека ")
  #   name[L] = input("Введите возраст человека ")
@@ -13,41 +12,63 @@ i = 0
 #    check_age = input("Ещё чей-то? да/нет ")
 print("Спасибо за использование нашей программы")
 
-# Словарь для хранения содержимого табл.
-i = 0
-n = 0
-tabl = {}
-ist = int(input("Введите число столбцов таблицы "))
-while True:
-    L = (n, i)
-    tabl[L] = input("Введите значение ячейки ")
-    if input("Желаете закончить? Да/Enter ") == 'Да':
-        break
-    if i < ist:
+global n, zero, L, i
+
+def Checking(i, n, zero=False):
+    L = (i, n)
+    if i < ist and zero == True:
         i += 1
-    else:
+    elif zero == True:
         n += 1
         i = 0
-l = 0
-for l in range(len(tabl)):
-    if l < ist:
-        print(tabl[(n, l)])
-    else:
-        print("\n")
+    tabl[L] = input("Введите значение ячейки ")
+    zero = True
+    return tabl[L]
+
+# Словарь для хранения содержимого табл.
+ist = int(input("Введите число столбцов таблицы "))
+while True:
+    Checking()
+    if input("Желаете закончить? Да/Enter ") == 'Да':
+        if len(tabl) % ist != 0:
+            print("Недостаточно ячеек, нужно ещё {0}".format(ist - (int(len(tabl)/ist)*ist - ist)))
+            while True:
+                print(tabl)
+                Checking()
+                if input("Желаете закончить? Да/Enter ") == 'Да':
+                    break
+        else:
+            break
+
 print(tabl)
-#l = 0
-#i = 0
-#if l <= 3:
-#    if i <= ist:
-#        print(tabl[(n, i)], "\t")
-#    else:
-#        i = 0
-#        l += 1
-#        print("\n")
+i = 0
+l = 0
+n = 0
+for i in range(len(tabl)):
+    if l % ist == 0 and l != 0:
+        print(tabl[(l, n)])
+        print("\n")
+        n += 1
+        l = 0
+    else:
+        print(tabl[(l, n)])
+        l += 1
+
+for i in range(len(tabl)):
+    try:
+        if l % ist == 0:
+             print(tabl[(l, n):(l+ist, n)])
+             l += ist
+             print("")
+             n += 1
+    finally:
+        print("")
+
 while input("Желаете изменить значение ячейки? Да/Нет ") == 'Да':
     L = (int(input("Введите столбец ")), int(input("Введите ряд ")))
     tabl[L] = input("Введите новое значение ячейки ")
     print(tabl)
+
 while input("Желаете узнать значение конкретной ячейки? Да/Enter ") == 'Да':
     print(tabl[int(input("Введите столбец ячейки ")), int(input("Введите ряд ячейки "))])
 
